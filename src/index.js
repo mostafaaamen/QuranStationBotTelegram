@@ -54,7 +54,7 @@ ${quran[suraNum].array[ayaNum + 1] != undefined ? `${quran[suraNum].array[ayaNum
         await DataSchema.findOneAndUpdate(filter, { ayaNum: 0 });
         console.log("sura is ended")
     }
-}, 1000*60*2)
+}, 1000*60*60*2)
 
 
 const bot = new Telegraf(process.env.TELEGRAM_TOKEN)
