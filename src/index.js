@@ -73,7 +73,6 @@ let html = `
 bot.start((ctx) => {
     ctx.reply(html, { parse_mode: 'HTML' });
     const chatId = ctx.chat.id;
-    ctx.reply(`Your chat ID is: ${chatId}`);
     console.log(chatId)
 });
 
