@@ -54,7 +54,7 @@ ${quran[suraNum].array[ayaNum + 1] != undefined ? `${quran[suraNum].array[ayaNum
         await DataSchema.findOneAndUpdate(filter, { ayaNum: 0 });
         console.log("sura is ended")
     }
-}, 15000)
+}, 1000*60*2)
 
 
 const bot = new Telegraf(process.env.TELEGRAM_TOKEN)
@@ -76,12 +76,12 @@ bot.start((ctx) => {
     ctx.reply(html, { parse_mode: 'HTML' });
     const chatId = ctx.chat.id;
     ctx.reply(`Your chat ID is: ${chatId}`);
+    console.log(chatId)
 });
 
 
 
 bot.launch()
-console.log("Tesdfsdf")
 
 
 
