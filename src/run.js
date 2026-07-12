@@ -50,5 +50,5 @@ async function processTask() {
 processTask();
 
 // التكرار كل 5 دقائق (5 دقائق * 60 ثانية * 1000 مللي ثانية)
-const TEN_MINUTES = 5 * 60 * 1000;
+const TEN_MINUTES = 10 * 60 * 1000;
 setInterval(processTask, TEN_MINUTES);
