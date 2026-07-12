@@ -49,16 +49,19 @@ export function getRandomAyahs(quranData = quran) {
   // 5. بناء وتنسيق المخرجات
   const text = selectedAyahs.map(a => `${a.ar} (${a.id})`).join(" ");
   const surahName = randomSurah.name;
-  
+  const surahNum=randomSurah.id
   const startAyahId = selectedAyahs[0].id;
   const endAyahId = selectedAyahs[selectedAyahs.length - 1].id;
   const ayahRange = startAyahId === endAyahId ? `${startAyahId}` : `${startAyahId} - ${endAyahId}`;
 
   return {
+    number: surahNum,
     text: text,
     surah: surahName,
     ayah: ayahRange,
-    totalAyahs: totalAyahs
+    totalAyahs: totalAyahs,
+    startAyahId,
+    endAyahId,
   };
 }
 
