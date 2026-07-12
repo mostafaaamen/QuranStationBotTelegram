@@ -8,7 +8,7 @@ import { startAutoPing } from './auto.js';
 startAutoPing();
 dotenv.config();
 // متغيّر لتحديد ما إذا كان المنشور القادم حديث أم قرآن (للتبادل بينهما)
-let isQuranNext = false;
+let isQuranNext = true;
 
 async function processTask() {
   try {
@@ -50,5 +50,5 @@ async function processTask() {
 processTask();
 
 // التكرار كل 5 دقائق (5 دقائق * 60 ثانية * 1000 مللي ثانية)
-const TEN_MINUTES = 10 * 60 * 1000;
+const TEN_MINUTES = 2 * 60 * 1000;
 setInterval(processTask, TEN_MINUTES);
